@@ -1,0 +1,23 @@
+.navbar{
+    background-color: black;
+    
+}
+
+.nav-item{
+    margin-left: 30px;
+}
+
+body{
+    background-image: url("1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    margin-top: 50px;
+}
+
+.col{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}

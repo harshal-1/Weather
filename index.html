@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" id="home1">Weather</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" id="home">Home</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Common Cities
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" id="mb">Mumbai</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#" id="pn">Pune</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#" id="kk">Kolkata</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#" id="bn">Bangalore</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              id="city"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit" id="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="my-4 text-center">Weather for <span id="cityName"></span></h1>
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3  text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Temperature Info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                    <span id="temp"></span><small class="text-muted fw-light"><span>&#8451;</span></small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Min Temperature is <span id="min_temp"></span><small class="text-muted fw-light"><span>&#8451;</span></small></li>
+                  <li>Max Temperature is <span id="max_temp"></span><small class="text-muted fw-light"><span>&#8451;</span></small></li>                  
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3  text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Humidity Info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                    <span id="humidity"></span><small class="text-muted fw-light"> %</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Feels Like is <span id="feels_like"></span></li>
+                    <li>Sunrise Time is <span id="sunrise"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Wind Info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                    <span id="wind_speed"></span><small class="text-muted fw-light"> km/hr</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Wind Degrees is <span id="wind_degrees"></span> radians</li>
+                    <li>Sunset Time is <span id="sunset"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+            <h2 class="head my-4 text-center">Basic Weather Details for Other Common Cities</h2>
+            
+        <div class="table-responsive">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;"></th>
+                        <th style="width: 20%">Temperature</th>
+                        <th style="width: 20%">Humidity</th>
+                <th style="width: 22%">Wind Speed</th>
+                <th style="width: 30%">Wind Degrees</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row" class="text-start">Mumbai</th>
+                <td><span id="temp_mumbai"></span> <small class="text-muted fw-light"><span>&#8451;</span></small></td>
+                <td><span id="humidity_mumbai"></span> %</td>
+                <td><span id="wind_speed_mumbai"></span> km/hr</td>
+                <td><span id="wind_degrees_mumbai"></span> radians</td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Pune</th>
+                <td><span id="temp_pune"></span> <small class="text-muted fw-light"><span>&#8451;</span></small></td>
+                <td><span id="humidity_pune"></span> %</td>
+                <td><span id="wind_speed_pune"></span> km/hr</td>
+                <td><span id="wind_degrees_pune"></span> radians</td>
+            </tr>
+        </tbody>
+        
+        <tbody>
+            <tr>
+                <th scope="row" class="text-start">Kolkata</th>
+                    <td><span id="temp_kolkata"></span> <small class="text-muted fw-light"><span>&#8451;</span></small></td>
+                    <td><span id="humidity_kolkata"></span> %</td>
+                    <td><span id="wind_speed_kolkata"></span> km/hr</td>
+                    <td><span id="wind_degrees_kolkata"></span> radians</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-start">Bangalore</th>
+                    <td><span id="temp_bangalore"></span> <small class="text-muted fw-light"><span>&#8451;</span></small></td>
+                    <td><span id="humidity_bangalore"></span> %</td>
+                    <td><span id="wind_speed_bangalore"></span> km/hr</td>
+                    <td><span id="wind_degrees_bangalore"></span> radians</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </main>
+        </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
